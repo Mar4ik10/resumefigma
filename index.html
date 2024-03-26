@@ -2,121 +2,211 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>My resume</title>
   </head>
   <body>
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
-        <title>My resume</title>
-      </head>
+      #main {
+        display: flex;
+        margin: 20px;
+      }
 
-      <body>
-        <!-- Wrapper -->
+      aside {
+        background-color: #7c9cb4;
+        color: white;
+      }
 
-        <div>
-          <aside>
-            <img src="photo.jpg" alt="My foto" width="300px" />
+      aside .block-img {
+        padding: 20px;
+        background-color: white;
+        margin: 10px;
+      }
 
-            <!-- Contacts -->
-            <div>
-              <h3>Контакти</h3>
+      aside a {
+        color: white;
+        text-decoration: none;
+      }
 
-              <p>Т: <a href="tel:+380992499104">+380992499104 </a></p>
-              <p>П: <a href="mailto:hello@gmail.com"> hello@gmail.com </a></p>
-            </div>
+      aside .aside-text {
+        padding: 15px;
+      }
 
-            <!-- Tech Skils -->
-            <div>
-              <h3>Програмні навички</h3>
-              <ul>
-                <li>Word</li>
-                <li>Figma</li>
-                <li>Python</li>
-              </ul>
-            </div>
+      .aside-text ul {
+        padding: 20px;
+      }
 
-            <!-- Soft Skils -->
+      .aside-text li {
+        font-size: 20px;
+      }
 
-            <div>
-              <h3>Навички</h3>
-              <ul>
-                <li>Самоорганізація</li>
-                <li>Креативнітсь</li>
-                <li>Нестандартне мислення</li>
-              </ul>
-            </div>
-          </aside>
+      aside h3 {
+        font-size: 35px;
+        font-weight: 500;
+      }
 
-          <section>
-            <!-- About me -->
+      aside a {
+        font-size: 20px;
+      }
 
-            <div>
-              <h2>Сайт-візитка</h2>
-              <h1>Марк Семенюк</h1>
+      aside h3:nth-child(1) {
+        margin: 22px 0;
+      }
 
-              <p>
-                Завжди закінчую те, за що беруся: від читання книжки до
-                півмарафону. Те саме стосується робочих задач та обов’язків.
-                Поважаю. чужу думку, йду на компроміс, але вмію відстоювати й
-                власне бачення, до роботи ставлюся з максимальною віддачею.
-              </p>
-            </div>
+      section {
+        margin: 50px;
+      }
 
-            <!-- My project -->
-            <div>
-              <h3>Посилання для додаткового зв’язку</h3>
+      section h2 {
+        margin-bottom: 20px;
+        font-size: 22px;
+      }
 
-              <ol>
-                <li>
-                  <a href=" https://www.instagram.com/">instagram</a>
-                  [відкрити]
-                </li>
-                <li>
-                  <a href="https://www.facebook.com/">facebook</a>
-                  [ відкрити ]
-                </li>
-              </ol>
-            </div>
+      section h1 {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
 
-            <div>
-              <h3>Освіта</h3>
-              <ul>
-                <li>Київський політехнічний інститут ім. Сікорського</li>
-                <li>Інформаційні технології</li>
-                <li>Ірпінь 2013-2017 рік | Україна</li>
-              </ul>
-            </div>
+      section h1 + p {
+        line-height: 24px;
+        font-size: 20px;
+        width: 350px;
+      }
 
-            <div>
-              <h3>Досвід роботи</h3>
+      section h3 {
+        font-size: 40px;
+      }
 
-              <!-- Company -->
-              <div>
-                <h4>Старший менеджер Ресторану</h4>
+      section li {
+        font-size: 20px;
+        margin-left: 20px;
+      }
 
-                <p>Вересень 2017 - до сьогодні | Київ</p>
+      section #contacts {
+        margin: 10px 0;
+      }
 
-                <ul>
-                  <li>
-                    <b>Робота з постачальниками і накладними документами;</b>
-                  </li>
-                  <li>
-                    <b>Проведення співбесід та оформлення працівників;</b>
-                  </li>
-                </ul>
-              </div>
+      section #education {
+        margin: 10px 0;
+      }
 
-              </div>
-            </div>
-          </section>
+      section #education ul {
+        list-style: none;
+      }
+
+      section #education ul li {
+        margin: 0;
+        line-height: 25px;
+      }
+
+      section #work-text h4 {
+        font-size: 30px;
+        margin: 10px 0;
+      }
+
+      section #work-text p {
+        font-size: 20px;
+        margin: 10px 0;
+      }
+
+      section #work-text li {
+        padding: 5px 0;
+      }
+    </style>
+
+    <!-- Wrapper -->
+    <div id="main">
+      <aside>
+        <div class="block-img">
+          <img src="photo.jpg" alt="My foto" width="300px" />
         </div>
-      </body>
-    </html>
+
+        <!-- Contacts -->
+
+        <div class="aside-text">
+          <div>
+            <h3>Контакти</h3>
+            <p>Т: <a href="tel:+380992499104">+38 099 249 9104</a></p>
+            <p>П: <a href="mailto:hello@gmail.com">hello@gmail.com</a></p>
+          </div>
+
+          <!-- Tech Skills -->
+          <div>
+            <h3>Програмні навички</h3>
+            <ul>
+              <li>HTML</li>
+              <li>Unity</li>
+              <li>Python</li>
+            </ul>
+          </div>
+
+          <!-- Soft Skills -->
+          <div>
+            <h3>Навички</h3>
+            <ul>
+              <li>Самоорганізація</li>
+              <li>Креативність</li>
+              <li>Нестандартне мислення</li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <section>
+        <!-- About me -->
+        <div>
+          <h2>Сайт-візитка</h2>
+          <h1>Марк Семенюк</h1>
+          <p>
+            Завжди закінчую те, за що беруся: від читання книжки до півмарафону.
+            Те саме стосується робочих задач та обов’язків. Поважаю чужу думку,
+            йду на компроміс, але вмію відстоювати власне бачення, до роботи
+            ставлюся з максимальною віддачею.
+          </p>
+        </div>
+
+        <!-- My projects -->
+        <div id="contacts">
+          <h3>Посилання для додаткового зв’язку</h3>
+          <ol>
+            <li>
+              instagram<a href="https://www.instagram.com/">[відкрити]</a>
+            </li>
+            <li>facebook<a href="https://www.facebook.com/">[відкрити]</a></li>
+          </ol>
+        </div>
+
+        <!-- Education -->
+        <div id="education">
+          <h3>Освіта</h3>
+          <ul>
+            <li>Київський політехнічний інститут ім. Сікорського</li>
+            <li>Інформаційні технології</li>
+            <li>Ірпінь 2013-2019 рік | Україна</li>
+          </ul>
+        </div>
+
+        <!-- Work Experience -->
+        <div id="work">
+          <h3>Досвід роботи</h3>
+          <!-- Company -->
+          <div id="work-text">
+            <h4>Розробка ігрового програмного забезпечення</h4>
+            <p>Вересень 2023 - до сьогодні | Київ</p>
+            <ul>
+              <li><b>Використання ігрового рушія Unity;</b></li>
+              <li><b>Використання основних патерних програмування;</b></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
